@@ -18,6 +18,22 @@ Config.shop = {
         BlipHash = -1733535731,
         BlipName = "Blackwater Hunter",
         BlipColor = "BLIP_MODIFIER_MP_COLOR_10",
+    },
+    shoplocation3 = {
+        allowblip = true,
+        name = "Strawberry",
+        Pos = { x = -1628.37, y = -872.94, z = 89.76 },
+        BlipHash = -1733535731,
+        BlipName = "Strawberry Hunter",
+        BlipColor = "BLIP_MODIFIER_MP_COLOR_10",
+    },
+    shoplocation4 = {
+        allowblip = true,
+        name = "Rhodes",
+        Pos = { x = 1394.44, y = -645.38, z = 71.58 },
+        BlipHash = -1733535731,
+        BlipName = "Rhodes Hunter",
+        BlipColor = "BLIP_MODIFIER_MP_COLOR_10",
     }
 }
 
@@ -27,17 +43,17 @@ Config.LevelIncreaseperHunt = 1 --This is how much your level will go up per com
 Config.Levels = {
     {
         level = 10,         --Level you have to be at
-        costreduction = 10, -- The Hunt's will cost this much less to start
+        costreduction = 5, -- The Hunt's will cost this much less to start
         nextlevel = 20,     --This has to be the number of the next level so since the next level is 20 it has to be set to 20
     },
     {
         level = 20,
-        costreduction = 20,
+        costreduction = 5,
         nextlevel = 30,
     },
     {
         level = 30,
-        costreduction = 30,
+        costreduction = 5,
         nextlevel = 40,
     }, --Can add or remove levels by copy pasting a table and changing what you need
 }
@@ -48,7 +64,7 @@ Config.locations = {
         --gator setup
         hintcost = 50,
         location = "Saint Denis",                                     -- location of hunt, needs to be same as shoplocation name
-        level = 1,                                                    -- level of trust needed
+        level = 0,                                                    -- level of trust needed
         Leganimalhealth = 500,                                        -- sets the legendary animals health amount max is 1000 I believe
         investigationspot = { x = 1718.58, y = -1001.05, z = 41.84 }, --this is where the first chest will spawn
         huntname = 'Legendary Gator',                                 --the name of the hunt in the menu(make sure these are unique no duplicates otherwise code will break)
@@ -58,7 +74,7 @@ Config.locations = {
         CooldownTime = 30000,                                        -- Time in ms that will have to pass before anyone can hunt this animal again
         GivenItems = {                                                --this lists the items it gives you you can add more if you want
             {
-                name = "legaligators",
+                name = "provision_meat_big_game",
                 count = 1
             },
         },
@@ -84,7 +100,7 @@ Config.locations = {
     {
         --bear setup
         hintcost = 50,
-        level = 0,               -- level of trust needed
+        level = 1,               -- level of trust needed
         location = "Blackwater", -- location of hunt, needs to be same as shoplocation name
         Leganimalhealth = 500,   --max is 1000 I believe
         investigationspot = { x = 1197.62, y = 2034.54, z = 322.93 },
@@ -95,7 +111,7 @@ Config.locations = {
         CooldownTime = 7200000,
         GivenItems = {
             {
-                name = "Steak",
+                name = "provision_meat_big_game",
                 count = 1
             },
         },
@@ -108,11 +124,11 @@ Config.locations = {
             { x = 722.36, y = 1845.43, z = 237.87 },
         },
         SecondaryAnimals = {
-            secondaryanimals = false,         --if true it will spawn animals along with the legendary animal to help it
-            animalmodel = 'A_C_Alligator_01', --this is the model of the secondary animal. Make sure this is not the same model as any legendary animals
+            secondaryanimals = true,         --if true it will spawn animals along with the legendary animal to help it
+            animalmodel = 'A_C_BearBlack_01', --this is the model of the secondary animal. Make sure this is not the same model as any legendary animals
             Animalspawns = {
-                { x = 1996.61, y = -1761.09, z = 41.51 },
-                { x = 1992.2,  y = -1761.04, z = 41.16 },
+                { x = 1416.96, y = 1802.72, z = 170.48 },
+                { x = 1416.96, y = 1802.72, z = 170.48 },
             },
         },
     },
@@ -130,12 +146,12 @@ Config.locations = {
         CooldownTime = 7200000,
         GivenItems = {
             {
-                name = "legwolfs1", --this is the 2nd item it gives
+                name = "provision_meat_big_game", --this is the 2nd item it gives
                 count = 1           --This is the amount of the 2nd item it gives
             },
         },
-        npcblipcoord = { x = -1812.67, y = 651.78, z = 131.04 },
-        npcschest = { x = -1822.0, y = 657.03, z = 131.72 },
+        npcblipcoord = { x = -2456.97, y = 839.2, z = 142.29 },
+        npcschest = { x = -2460.53, y = 838.52, z = 146.36 },
         Npccoords = {
             { x = -1816.78, y = 647.18, z = 130.97 },
             { x = -1808.41, y = 652.65, z = 131.11 },
@@ -143,29 +159,29 @@ Config.locations = {
             { x = -1809.72, y = 668.07, z = 133.31 },
         },
         SecondaryAnimals = {
-            secondaryanimals = false,         --if true it will spawn animals along with the legendary animal to help it
-            animalmodel = 'A_C_Alligator_01', --this is the model of the secondary animal. Make sure this is not the same model as any legendary animals
+            secondaryanimals = true,         --if true it will spawn animals along with the legendary animal to help it
+            animalmodel = 'A_C_Wolf', --this is the model of the secondary animal. Make sure this is not the same model as any legendary animals
             Animalspawns = {
-                { x = 1996.61, y = -1761.09, z = 41.51 },
-                { x = 1992.2,  y = -1761.04, z = 41.16 },
+                { x = -1526.75, y = 517.37, z = 102.05 },
+                { x = -1526.75, y = 517.37, z = 102.05 },
             },
         },
     },
     {
         --boar setup
         hintcost = 50,
-        location = "Strawberry", -- location of hunt, needs to be same as shoplocation name
+        location = "Rhodes", -- location of hunt, needs to be same as shoplocation name
         level = 3,               -- level of trust needed
         Leganimalhealth = 500,   --max is 1000 I believe
         investigationspot = { x = 757.77, y = -842.5, z = 55.24 },
         huntname = "Legendary Boar",
         enemynpc = true,
         coordinates = { x = 1182.4, y = -96.61, z = 96.55 },
-        pedmodel = 'MP_A_C_Boar_01',
+        pedmodel = 'a_c_boarlegendary_01',
         CooldownTime = 7200000,
         GivenItems = {
             {
-                name = "legboars", --this is the 2nd item it gives
+                name = "provision_meat_game", --this is the 2nd item it gives
                 count = 1          --This is the amount of the 2nd item it gives
             },
         },
@@ -178,29 +194,29 @@ Config.locations = {
             { x = 892.39, y = 247.5,  z = 117.96 },
         },
         SecondaryAnimals = {
-            secondaryanimals = false,         --if true it will spawn animals along with the legendary animal to help it
-            animalmodel = 'A_C_Alligator_01', --this is the model of the secondary animal. Make sure this is not the same model as any legendary animals
+            secondaryanimals = true,         --if true it will spawn animals along with the legendary animal to help it
+            animalmodel = 'A_C_Boar_01', --this is the model of the secondary animal. Make sure this is not the same model as any legendary animals
             Animalspawns = {
-                { x = 1996.61, y = -1761.09, z = 41.51 },
-                { x = 1992.2,  y = -1761.04, z = 41.16 },
+                { x = 1182.4, y = -96.61, z = 96.55 },
+                { x = 1182.4, y = -96.61, z = 96.55 },
             },
         },
     },
     {
         --fox
-        hintcost = 70,
-        location = "Strawberry", -- location of hunt, needs to be same as shoplocation name
+        hintcost = 50,
+        location = "Rhodes", -- location of hunt, needs to be same as shoplocation name
         level = 4,               -- level of trust needed
         Leganimalhealth = 500,   --max is 1000 I believe
         investigationspot = { x = 1470.33, y = -1723.61, z = 61.85 },
         huntname = "Legendary Fox",
-        enemynpc = false,
+        enemynpc = true,
         coordinates = { x = 751.77, y = -971.89, z = 48.7 },
         pedmodel = 'MP_A_C_FOX_01',
         CooldownTime = 7200000,
         GivenItems = {
             {
-                name = "legfoxs3", --this is the 2nd item it gives
+                name = "provision_meat_game", --this is the 2nd item it gives
                 count = 1          --This is the amount of the 2nd item it gives
             },
         },
@@ -213,14 +229,14 @@ Config.locations = {
             { x = 892.39, y = 247.5,  z = 117.96 },
         },
         SecondaryAnimals = {
-            secondaryanimals = false,         --if true it will spawn animals along with the legendary animal to help it
-            animalmodel = 'A_C_Alligator_01', --this is the model of the secondary animal. Make sure this is not the same model as any legendary animals
+            secondaryanimals = true,         --if true it will spawn animals along with the legendary animal to help it
+            animalmodel = 'A_C_Fox_01', --this is the model of the secondary animal. Make sure this is not the same model as any legendary animals
             Animalspawns = {
-                { x = 1996.61, y = -1761.09, z = 41.51 },
-                { x = 1992.2,  y = -1761.04, z = 41.16 },
+                { x = 751.77, y = -971.89, z = 48.7 },
+                { x = 751.77, y = -971.89, z = 48.7 },
             },
         },
-    }, --Too add more hunts just copy and paste one from above and change what you need
+    }, --To add more hunts just copy and paste one from above and change what you need
 }
 
 ------------------------------------------ TRANSLATE HERE! ------------------------------------------------------
